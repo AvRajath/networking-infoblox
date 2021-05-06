@@ -229,6 +229,6 @@ class GridTestCase(base.TestCase, testlib_api.SqlTestCase):
 
     def test__set_default_values(self):
         # validate that default values are set as member properties
-        for prop, key in self.test_grid_config.property_to_ea_mapping.items():
+        for prop, key in list(self.test_grid_config.property_to_ea_mapping.items()):
             self.assertEqual(const.GRID_CONFIG_DEFAULTS[key],
                              getattr(self.test_grid_config, prop))
