@@ -371,7 +371,7 @@ def get_hash(text=None):
     if text and isinstance(text, six.string_types):
         text = text.encode('utf-8')
         return hashlib.md5(text).hexdigest()
-    return hashlib.md5(str(time.time())).hexdigest()
+    return hashlib.md5(str(time.time()).encode('utf-8')).hexdigest()
 
 
 def get_oid_from_nios_ref(obj_ref):
