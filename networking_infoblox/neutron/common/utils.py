@@ -1,4 +1,4 @@
-# Copyright 2015 Infoblox Inc.
+# Copyright 2021 Infoblox Inc.
 # All Rights Reserved.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -20,7 +20,9 @@ import netaddr
 import re
 import six
 import time
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
+import urllib.parse
+import urllib.error
 
 from oslo_serialization import jsonutils
 
@@ -322,7 +324,8 @@ def find_in_list_by_value(search_value, search_list,
         return None
 
     if isinstance(search_list[0], dict):
-        found_list = [m for m in search_list if search_value in list(m.values())]
+        found_list = [m for m in search_list if search_value in list(
+                                                                m.values())]
     else:
         found_list = [m for m in search_list
                       if search_value in list(m.__dict__.values())]
