@@ -13,7 +13,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-import mock
+import unittest.mock as mock
 import netaddr
 
 from neutron.ipam import utils as ipam_utils
