@@ -14,6 +14,7 @@
 #    under the License.
 
 import unittest.mock as mock
+
 import netaddr
 
 from infoblox_client import exceptions as ib_exc

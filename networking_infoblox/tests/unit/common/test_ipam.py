@@ -14,6 +14,7 @@
 #    under the License.
 
 import unittest.mock as mock
+
 import netaddr
 
 from neutron.ipam import utils as ipam_utils

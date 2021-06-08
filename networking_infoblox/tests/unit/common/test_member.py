@@ -14,6 +14,7 @@
 #    under the License.
 
 import unittest.mock as mock
+
 from oslo_serialization import jsonutils
 
 from neutron.tests.unit import testlib_api

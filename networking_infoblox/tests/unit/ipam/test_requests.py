@@ -14,7 +14,9 @@
 #    under the License.
 
 import unittest.mock as mock
+
 import netaddr
+
 from neutron_lib import constants as n_const
 
 from networking_infoblox.ipam import requests

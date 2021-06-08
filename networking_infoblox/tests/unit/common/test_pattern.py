@@ -108,7 +108,7 @@ class TestPatternBuilder(base.TestCase):
 
     def test_get_hostname_for_other_device_owners(self):
         for dev, patt in list(
-                      const.NEUTRON_DEVICE_OWNER_TO_PATTERN_MAP.items()):
+            const.NEUTRON_DEVICE_OWNER_TO_PATTERN_MAP.items()):
             expected_hostname = str.format(
                 "{}.{}", patt.replace('{ip_address}',
                                       self.expected_ip),
@@ -123,7 +123,7 @@ class TestPatternBuilder(base.TestCase):
         self.pattern_builder.grid_config.external_domain_name_pattern = (
             'external.infoblox.com')
         for dev, patt in list(
-                      const.NEUTRON_DEVICE_OWNER_TO_PATTERN_MAP.items()):
+            const.NEUTRON_DEVICE_OWNER_TO_PATTERN_MAP.items()):
             expected_hostname = str.format(
                 "{}.{}", patt.replace('{ip_address}',
                                       self.expected_ip),

@@ -17,6 +17,7 @@ import eventlet
 eventlet.monkey_patch()
 
 import unittest.mock as mock
+
 import time
 
 from neutron.tests.unit import testlib_api
