@@ -7,8 +7,8 @@ Contains Neutron drivers for integration with Infoblox grids for IPAM and DNS.
 * Free software: Apache license
 * Source: http://git.openstack.org/cgit/openstack/networking-infoblox
 * Bugs: http://bugs.launchpad.net/networking-infoblox
-* Installation: https://github.com/openstack/networking-infoblox/blob/master/doc/source/installation.rst
-* Configuration Guide: https://github.com/openstack/networking-infoblox/blob/master/doc/source/configuration_guide.rst
+* Installation: https://opendev.org/x/networking-infoblox/src/branch/master/doc/source/installation.rst
+* Configuration Guide: https://opendev.org/x/networking-infoblox/src/branch/master/doc/source/configuration_guide.rst
 
 Features
 --------
