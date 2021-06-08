@@ -20,7 +20,10 @@ import netaddr
 import re
 import six
 import time
+
 import urllib.error
+import urllib.parse
+import urllib.request
 
 from oslo_serialization import jsonutils
 
@@ -162,7 +165,7 @@ def get_ip_version(ip_address):
     if not valid:
         raise ValueError("Invalid argument was passed.")
 
-    if isinstance(ip_address, dict):
+    if type(ip_address) is dict:
         ip = ip_address['ip_address']
     else:
         ip = ip_address
@@ -377,7 +380,7 @@ def get_hash(text=None):
 
 def get_oid_from_nios_ref(obj_ref):
     if obj_ref and isinstance(obj_ref, six.string_types) and len(obj_ref) > 0:
-        match = re.search('\\S+\\/(\\S+):(\\S+)', obj_ref)
+        match = re.search('\S+\/(\S+):(\S+)', obj_ref)
         if match:
             return match.group(1)
     return None
@@ -393,9 +396,7 @@ def get_network_view_id(grid_id, obj_ref):
 
 def get_network_info_from_nios_ref(network_ref):
     if network_ref and len(network_ref) > 0:
-        match = re.search(
-            '(\\S+)\\/(\\S+):(\\S+)\\/(\\d+)\\/(\\S+)',
-            network_ref)
+        match = re.search('(\S+)\/(\S+):(\S+)\/(\d+)\/(\S+)', network_ref)
         if match:
             cidr = match.group(3) + '/' + match.group(4)
             if match.group(1) == 'ipv6network':
